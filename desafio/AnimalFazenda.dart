@@ -1,6 +1,6 @@
 abstract class AnimalFazenda {
 
-    void emitirSom();
+    void emitirSom(); //modo abstrato
     void extrair();
     void dormir(){
     print("dormindo");
