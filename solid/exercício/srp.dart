@@ -13,13 +13,13 @@
 }
  */
 
-class UsuarioManager {
+class UsuarioManager { //refatoração do profesor: class UsuarioRecovery
   void salvarUsuario(String nome){
     print("Usuário $nome salvo no bnaco de dados.");
   }
 }
 
-class Autenticar extends UsuarioManager {
+class Autenticar { //refatorração do professor: class Autenticator
   bool autenticar(String usuario, String senha) {
     return usuario == "admin" && senha == "123";
   }

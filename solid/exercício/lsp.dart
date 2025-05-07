@@ -16,7 +16,7 @@ class Quadrado extends Retangulo {
 }
  */
 
-class Dimencoes {
+class Dimencoes { // código reformulado de forma errada
   double largura;
   double altura;
 
@@ -32,3 +32,27 @@ class Quadrado extends Dimencoes {
   Quadrado(double tamanho) : super(tamanho, tamanho);
 }
 
+// refaturação do professor
+
+abstract class Forma{
+  double calcularArea();
+}
+
+class Retanguloo implements Forma {
+  double largura1;
+  double altura1;
+
+  Retanguloo(this.altura1, this.largura1);
+
+  @override
+  double calcularArea() => largura1 * altura1;
+}
+
+class Quadradoo implements Forma {
+  double lado;
+
+  Quadradoo(this.lado);
+
+  @override
+  double calcularArea() => lado * lado;
+}

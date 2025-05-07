@@ -15,16 +15,12 @@ class Robo implements Funcionario {
 } 
 */
 
-class Trabalhando {
-  void trabalhar(){
-    print("funcionáro esá trabalhando");
-  }
+abstract class Trabalhando { // esqueci de por 'abstract'
+  void trabalhar();
 }
 
-class Comendo extends Trabalhando {
-  void comer(){
-    print('funcionário está comendo');
-  }
+abstract class Comendo {
+  void comer();
 }
 
 class Robo implements Trabalhando {
@@ -32,4 +28,14 @@ class Robo implements Trabalhando {
   void trabalhar() {
     print("Robô está trabalhando");
   }
+}
+
+// classee que nao criei e o professor criou
+
+class Humano implements Trabalhando, Comendo {
+  @override
+  void trabalhar() => print("Humano trabalhando");
+
+  @override
+  void comer() => print("Comendo pastel com caldo de cana");
 }

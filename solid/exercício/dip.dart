@@ -19,7 +19,7 @@ class RelatorioService {
 } 
 */
 
-abstract class MySQLDatabase {
+/* abstract class MySQLDatabase {
   void salvar(String dado) {
     print('Salvando "$dado" no MySQL');
   }
@@ -31,6 +31,30 @@ class RelatorioService {
   RelatorioService(this.db);
 
   void gerarRelatorio(String conteudo) {
+    db.salvar(conteudo);
+  }
+} */
+
+// refatoração do professor
+
+abstract class Database{
+  void salvar(String dado);
+}
+
+class MysqlDatabese implements Database{
+  @override
+  void salvar(String dado) {
+    print("Dado $dado salvo com sucesso");
+  }
+}
+
+class RelatorioService {
+  final Database db;
+
+  RelatorioService(this.db);
+
+  void gerarRelatorio(String conteudo){
+    print("exibir relatório: $conteudo");
     db.salvar(conteudo);
   }
 }
