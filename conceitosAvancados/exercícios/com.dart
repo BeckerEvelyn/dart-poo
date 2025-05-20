@@ -9,6 +9,8 @@ class Processador{
   Processardor(){
     print("Processador criado");
   }
+
+  void desligar() => print("desligando processador");
 }
 
 class Memoria{
@@ -28,7 +30,7 @@ class Disco{
 }
 
 class Computador{
-  late Processador precessador;
+  late Processador processador;
   late Memoria memoria;
   late Disco disco;
 
@@ -44,7 +46,7 @@ class Computador{
     print("Desligando pc");
     processador.desligar();
     memoria.desligar();
-    disco.desligar();
+    disco.desligando();
     print("pc desligando");
   }
 }

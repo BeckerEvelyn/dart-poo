@@ -66,3 +66,20 @@ class Multiplicacao extends Calculadora{
     print("Produto: $produt");
   }
 }
+
+
+
+// exemplo do professor
+
+//alta coesão
+class calculadoraFinanceira{
+  double calcularJuros(double valor, double taxa) => valor * taxa;
+  double converterMoeda(double valor, double taxaCambio) => valor * taxaCambio;
+}
+
+//baixa coesão (faz muita coisa)
+class calculadoraBaguncadas{
+  void autenticarUsuario() => print("autenticado");
+  double calcular() => 42;
+  bool salvarArquivo() => true;
+}
